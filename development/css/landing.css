@@ -61,7 +61,7 @@ p {
 }
 
 #navbar {
-  background-color: rgba(0, 71, 104, 0.3);
+  /* background-color: rgba(0, 71, 104, 0.3); */
   /* border: 5px dashed rgba(10, 10, 10, 0.3); */
   display: flex;
     align-items: center;
@@ -73,7 +73,7 @@ p {
 
 
 main {
-  background-color: rgba(158, 0, 0, 0.3);
+  /* background-color: rgba(158, 0, 0, 0.3); */
 
   height: calc(100% - 64px);
   display: flex;
@@ -88,4 +88,27 @@ main div {
     justify-content: center; 
     flex-direction: column;
   text-align: center;
+}
+
+main h1 {
+  font-size: 36px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+main h2 {
+  margin-bottom: 20px;
+}
+
+main button {
+  background-color: #199dff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 30px 40px 0 rgba(25, 157, 255, 0.1);
+  height: 45px;
+  width: 200px;
+}
+
+main a {
+  color: #ffffff;
 }
