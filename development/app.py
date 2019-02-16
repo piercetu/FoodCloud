@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request
+from flask import *
+# Flask, render_template, request, 
 import requests
 import json
+import pyrebase
 
 app = Flask(__name__)
 
@@ -31,6 +33,21 @@ def search():
 
         return render_template('search.html', zips=zips)
 
+@app.route('/signup', methods=['POST', 'GET'])
+def signup():
+    unsuccessful = 'Please check your credentials'
+    successful = 'Login successful'
+    if request.method == 'POST':
+        print("received request")
+        email = request.form['name']
+        password = request.form['pass']
+        try:
+        	auth.sign_in_with_email_and_password(email, password)
+        	return render_template('signup.html', s=successful)
+        except:
+            return render_template('signup.html', us=unsuccessful)
+    return render_template('signup.html')
+
 
 @app.route('/business')
 def business():
@@ -41,3 +58,28 @@ def business():
 if __name__ == "__main__":
     print("Running FoodCloud")
     app.run(host="127.0.0.1", port=5000)
+
+config = {
+    "apiKey": "AIzaSyAAQy9dhBXZwjs79hhWdDl2ROrg394gD58",
+    "authDomain": "foodcloud-e429c.firebaseapp.com",
+    "databaseURL": "https://foodcloud-e429c.firebaseio.com",
+    "projectId": "foodcloud-e429c",
+    "storageBucket": "foodcloud-e429c.appspot.com",
+    "messagingSenderId": "963030835928"
+  }
+
+firebase = pyrebase.initialize_app(config)
+
+# Get a reference to the auth service
+auth = firebase.auth()
+
+# Sign up
+# email = input('Please enter email\n')
+# password = input('Please enter password\n')
+
+# Create user
+user = auth.create_user_with_email_and_password(session["email"], session["password"])
+
+# Pass the user's idToken to the push method
+auth.get_account_info(user['idToken'])
+
