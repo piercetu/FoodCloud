@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* div {
     display: block;
 } */
@@ -41,6 +40,15 @@
     margin-left: 300px;
     padding: 15px;
 }
-=======
-/* Seller Page CSS */
->>>>>>> e93b8ce37d07a1438b832d73abfce6109fed612b
+
+
+#seller {
+  height: 100vh;
+}
+
+input[type="file"] {
+  height: 300px;
+  width: 300px;
+  background: none;
+  border: black;
+}
