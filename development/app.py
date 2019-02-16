@@ -37,15 +37,21 @@ def search():
 def signup():
     unsuccessful = 'Please check your credentials'
     successful = 'Login successful'
+    
     if request.method == 'POST':
+        print("***********************************")
         print("received request")
-        email = request.form['name']
-        password = request.form['pass']
+        print("***********************************")
+        email = request.form['email']
+        print("error email")
+        password = request.form['password']
+        print("error pw")
         try:
         	auth.sign_in_with_email_and_password(email, password)
         	return render_template('signup.html', s=successful)
         except:
             return render_template('signup.html', us=unsuccessful)
+
     return render_template('signup.html')
 
 
