@@ -9,56 +9,21 @@
   <title>Food Cloud - insert text</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ url_for('static',filename='styles/seller.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/form.css') }}">
 </head>
 
 <body>
 
-  <h1>WHAT KINDA GOODS U SELLING BRUHV</h1>
-  <div class="seller-container">
-    <div class="seller-row">
+  <!-- <input type="file"> -->
+  <!-- <label class="custom-file" for="Image">Select file to upload</label> -->
 
-      <div class="seller item shadow-large">
-
-        <!-- Image -->
-        <div class="seller-image">
-          <!-- <input type="file" name="item-picture" value="Hi..."> -->
-          <!-- <input type="file" id="files" class="hidden" />
-          <label for="files">Select file</label> -->
-          <div class="file btn btn-lg btn-primary">
-            Upload
-            <input type="file" name="file" />
-          </div>
+  <label class="file">
+    <input type="file" id="file" aria-label="File browser example">
+    <span class="file-custom"></span>
+  </label>
 
 
-          hello world hi my name is Nhat Nguyen - Hi There
 
-          <!-- <img src="{{ url_for('static',filename='resources/homepage.jpg') }}" alt="sup" height="300px" width="300px"> -->
-        </div>
-
-        <!-- Right Side -->
-        <div class="seller-info">
-          <h3> DA GOODS(Title)</h3>
-          <h4> $600000 DOLLAS</h4>
-          <p>Lorem ipsum dolor sit amet, wisi sententiae incorrupte id vix, ut nam quis vero voluptatum. No numquam
-            fabellas est, purto saepe qui ut. Vim ne clita dicant insolens. An illud impedit invidunt eos. Brute
-            persequeris at pri.
-            Ex vim facer eligendi omittantur, ex ius tota ipsum facete.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div id="seller">
-    <h1>Buyer's Section</h1>
-    <div id="add-items">
-      <input type="file" name="item-picture">
-      <input type="text" name="item-name">
-      <input type="text" name="item-price">
-      <input type="text" name="item-description">
-    </div>
-    <div id="view-items"></div>
-  </div>
 </body>
 
 </html>
