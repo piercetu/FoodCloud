@@ -1,0 +1,29 @@
+body {
+    overflow: hidden;
+    background: url(../resources/homepage.jpg);
+      background-size: cover;
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+
+h1 {
+    font-size: 100px;
+    padding-bottom: 180px;
+}
+
+h2 {
+    font-size: 120px;
+    text-align: center;
+}
+
+/* .linewidth {
+    padding-l
+} */
+
+.line {
+    border-bottom: 1px solid #b1b1b1;
+}
+
+
+

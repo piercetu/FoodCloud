@@ -1,0 +1,32 @@
+#buyer { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+body {
+    overflow: hidden;
+    background: url(../resources/homepage.jpg);
+      background-size: cover;
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+
+h2 {
+    padding-top: 40px;
+}
+
+button {
+    margin-top: 40px;
+}
+
+h3 { 
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    margin: 0 0 15px 0;
+}
