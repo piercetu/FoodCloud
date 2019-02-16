@@ -1,4 +1,4 @@
-#landing-page {
+/* #landing-page {
   display: flex;
     align-items: center;
     justify-content: center;
@@ -33,4 +33,48 @@ body {
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+} */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #eeeff0;
+  padding: 20px;
+}
+
+p {
+  margin: 0px;
+}
+
+/* Base */
+#landing {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+#navbar {
+  background-color: rgba(0, 71, 104, 0.3);
+  /* border: 5px dashed rgba(10, 10, 10, 0.3); */
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  padding: 0 2%;
+  height: 64px;
+}
+
+
+
+main {
+  background-color: rgba(158, 0, 0, 0.3);
+  /* border: 5px dashed rgba(129, 0, 0, 0.3); */
+  /* height: 100%; */
+  height: calc(100% - 64px);
 }
