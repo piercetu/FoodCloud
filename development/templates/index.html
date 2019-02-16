@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FoodCloud | Solution to Reducing Food Waste</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/landing.css">
-  <link rel="icon" href="../resources/favicon.png">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/landing.css') }}">
+  <link rel="icon" href="{{ url_for('static',filename='resources/favicon.png') }}">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <!-- Navbar -->
     <div id="navbar">
       <div id="navbar-brand">
-        <img src="../resources/favicon.png" alt="FoodCloud Logo">
+        <img src="{{ url_for('static',filename='resources/favicon.png') }}" alt="FoodCloud Logo">
         <span>FoodCloud</span>
       </div>
       <div id="navbar-links">
@@ -32,7 +32,7 @@
       <div>
         <h1>FoodCloud</h1>
         <h2>A web application solution to reducing food waste</h2>
-        <button><a href="#">Next Steps</a></button>
+        <button><a href="/start">Next Steps</a></button>
       </div>
     </main>
 

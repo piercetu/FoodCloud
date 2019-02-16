@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" href="../resources/favicon.png">
+        <link rel="icon" href="{{ url_for('static',filename='resources/favicon.png') }}">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Food Cloud - insert text</title>
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/seller.css">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/seller.css') }}">
     </head>
     <body>
         <h1>WHAT KINDA GOODS U SELLING BRUHV</h1>
@@ -16,7 +16,7 @@
             <div class="seller-row">
                 <div class="seller shadow-large">
                     <div class="seller-image">
-                        <img src="../resources/homepage.jpg" alt="sup" height="300px" width="300px">
+                        <img src="{{ url_for('static',filename='resources/homepage.jpg') }}" alt="sup" height="300px" width="300px">
                     </div>
 
                     <div class="seller-info">
