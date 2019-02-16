@@ -74,7 +74,18 @@ p {
 
 main {
   background-color: rgba(158, 0, 0, 0.3);
-  /* border: 5px dashed rgba(129, 0, 0, 0.3); */
-  /* height: 100%; */
+
   height: calc(100% - 64px);
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main div {
+  width: 400px;
+  display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+  text-align: center;
 }
