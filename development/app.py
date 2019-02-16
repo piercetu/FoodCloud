@@ -29,10 +29,7 @@ def search():
         data = source.text
         zips = json.loads(data)['zip_codes']
 
-        for zipcodes in zips:
-            print(zipcodes['zip_code'], zipcodes['distance'])
-
-        return render_template('search.html', zips)
+        return render_template('search.html', zips=zips)
 
 
 @app.route('/business')
