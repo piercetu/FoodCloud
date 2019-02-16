@@ -1,4 +1,9 @@
 #landing-page {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  font-family: sans-serif;
   height: 100vh;
 }
 
@@ -13,12 +18,12 @@ h3 {
   font-size: 25px;
   padding-bottom: 150px;
 }
-#start {
-  height: 50px;
-  width: 200px;
-  border-radius: 10px;
-  /* text-align: center; */
 
+#start {
+  border-radius: 10px;
+  height: 50px;
+  font-size: 18px;
+  width: 200px;
 }
 
 body {
@@ -28,11 +33,4 @@ body {
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-div {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
