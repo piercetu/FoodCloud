@@ -1,0 +1,113 @@
+// =========================================
+//  Navigation Bar
+// =========================================
+
+
+// Imports ------------------------------- /
+@import 'variables';
+
+
+// Variables ----------------------------- /
+$debug-color: rgba(185, 193, 66, 0.25);
+
+
+// Base: Navigation Bar ------------------ /
+#navbar {
+  position: fixed;
+    top: 0px;
+}
+
+#navbar-main {
+  @include debug($debug-color);
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  height: 100vh;
+  width: $navbar-width-large;
+
+  a {
+    @include debug($debug-color);
+    display: flex;
+      align-items: center;
+      justify-content: center;
+    height: $navbar-width-large;
+    width: 100%;
+
+    &:hover {
+      background-color: darken($debug-color, 25%);
+    }
+  }
+
+  img {
+    height: 48px;
+    width: 48px;
+  }
+
+  button {
+    // background-color: $debug-color;
+    // border: none;
+    @include debug($debug-color);
+    cursor: pointer;
+    font-size: 26px;
+    height: $navbar-width-large;
+    outline: none;    // Google Chrome
+    padding: 0px;
+    user-select: none;
+    width: 100%;
+
+    &:hover {
+      background-color: darken($debug-color, 25%);
+    }
+  }
+}
+
+#navbar-info {
+  @include debug();
+  text-align: center;
+  transform: rotate(-90deg);
+  width: 200px;
+
+  h2 {
+    font-size: 14px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  span {
+    font-size: 10px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+
+// Media Queries ------------------------- /
+@media only screen and (max-width: $breakpoint-medium) {
+  // Medium: width is below 990px pixels
+  #navbar {
+    width: 100%;
+  }
+
+  #navbar-main {
+    height: $navbar-width-medium;
+    width: inherit;
+    flex-direction: row;
+
+    a {
+      height: 100%;
+      width: $navbar-width-medium;
+    }
+
+    button {
+      height: 100%;
+      width: $navbar-width-medium;
+    }
+  }
+
+  #navbar-info {
+    transform: rotate(0deg);
+  }
+}

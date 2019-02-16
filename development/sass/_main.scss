@@ -1,0 +1,122 @@
+// =========================================
+//  Main
+// =========================================
+
+
+// Imports ------------------------------- /
+@import 'variables';
+
+
+// Variables ----------------------------- /
+$debug-color: rgba(193, 66, 66, 0.33);
+
+
+// Base: Main ---------------------------- /
+main {
+  margin-left: $navbar-width-large;
+}
+
+#hero {
+  display: flex;
+  height: 100vh;
+}
+
+#hero-content, #hero-image {
+  @include debug();
+  height: inherit;
+  width: 50vw;
+}
+
+#hero-image {
+  @include debug();
+  background: url("https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80");
+    background-position: center;
+    background-size: cover;
+}
+
+#hero-content {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  padding: 0 7%;
+  overflow-x: hidden;
+}
+
+// Hero Content -------------------------- /
+#hero-contact {
+  @include debug();
+  display: flex;
+  margin-top: 25px;
+  font-size: 10px;
+  text-transform: uppercase;
+
+  p {
+    margin-right: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
+section {
+  @include debug();
+
+  h1 {
+    font-size: 44px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+  }
+
+  img {
+    transform: scale(0.5);
+    transform-origin: top left;
+    max-width: initial;
+  }
+}
+
+#hero-location {
+  @include debug();
+  display: flex;
+  margin-bottom: 25px;
+
+  img {
+    height: 32px;
+    margin-right: 10px;
+    width: 32px;
+  }
+}
+
+
+// About Section ------------------------- /
+#about {
+  @include debug(rgba(193, 66, 193, 0.5));
+  height: 400px;
+}
+
+
+// Media Queries ------------------------- /
+@media only screen and (max-width: $breakpoint-medium) {
+  // Medium: width is below 990px pixels
+  main {
+    margin-left: 0;
+    margin-top: $navbar-width-medium;
+  }
+
+  #hero {
+    display: block;
+    height: initial;
+
+    #hero-content, #hero-image {
+      min-height: 550px;
+      width: 100%;
+    }
+  }
+}

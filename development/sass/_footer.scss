@@ -1,0 +1,79 @@
+// =========================================
+//  Footer
+// =========================================
+
+
+// Imports ------------------------------- /
+@import 'variables';
+
+
+// Variables ----------------------------- /
+$debug-color: rgba(66, 193, 94, 0.5);
+$debug-height: 200px;
+
+$footer-breakpoint: 480px;
+
+
+// Base: Footer -------------------------- /
+#footer {
+  display: flex;
+    flex-wrap: wrap;
+  margin-left: $navbar-width-large;
+}
+
+#footer-about {
+  @include debug();
+  height: $debug-height;
+  width: 33.33%;
+}
+
+#footer-nav {
+  @include debug();
+  height: $debug-height;
+  width: 16.66%;
+}
+
+#footer-contact {
+  @include debug();
+  height: $debug-height;
+  width: 25%;
+}
+
+#footer-social {
+  @include debug();
+  height: $debug-height;
+  width: 25%;
+}
+
+#footer-bottom {
+  @include debug();
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  height: 80px;
+  width: 100%;
+}
+
+
+// Media Queries ------------------------- /
+@media only screen and (max-width: $breakpoint-medium) {
+  // Medium: width is below 990px pixels
+  #footer {
+    margin: 0;
+  }
+
+  #footer-about, #footer-nav, #footer-contact, #footer-social {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: $footer-breakpoint) {
+  // Footer: width is below 500px pixels
+  #footer-about, #footer-nav, #footer-contact, #footer-social {
+    width: 100%;
+  }
+
+  #footer-bottom {
+    display: block;
+  }
+}

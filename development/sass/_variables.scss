@@ -1,0 +1,19 @@
+// =========================================
+//  Variables
+// =========================================
+
+
+// Navigation Bar Width ------------------ /
+$navbar-width-large: 88px;
+$navbar-width-medium: 64px;
+$navbar-width-small: 56px;
+
+// Breakpoints --------------------------- /
+$breakpoint-medium: 990px;
+$breakpoint-small: 768px;
+
+// Mixin --------------------------------- /
+@mixin debug($color: $debug-color) {
+  background-color: $color;
+  border: 2px dashed darken($color, 8%);
+}
