@@ -12,7 +12,7 @@ def start():
 
 @app.route('/customer')
 def customer():
-    return render_template('customer.html')
+    return render_template('buyer.html')
 
 @app.route('/business')
 def business():
