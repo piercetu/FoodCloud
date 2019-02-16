@@ -23,3 +23,10 @@ h2 {
 button {
     margin-top: 40px;
 }
+
+h3 { 
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    margin: 0 0 15px 0;
+}

@@ -1,0 +1,42 @@
+/* div {
+    display: block;
+} */
+
+.seller-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 970px;
+}
+
+.seller-row { 
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.seller {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.seller-image { 
+    float: left;
+}
+
+.shadow-large { 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.seller-info { 
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); 
+    margin-left: 300px;
+    padding: 15px;
+}
