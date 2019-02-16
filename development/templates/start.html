@@ -16,13 +16,13 @@
   <div id="start">
     <h1>Are you a</h1>
     <!-- <h2>Customer or a Business Owner?</h2> -->
-    <a class="selection customer" href="../templates/buyer.html">
-      <img src="../static/resources/start-customer.png" alt="Customer Image">
+    <a class="selection customer" href="/customer">
+      <img src="{{ url_for('static', filename='resources/start-customer.png') }}" alt="Customer Image">
       <p>Customer</p>
     </a>
     <p>Or</p>
-    <a class="selection business" href="../templates/seller.html">
-      <img src="../static/resources/start-business.png" alt="Business Owner Image">
+    <a class="selection business" href="/business">
+      <img src="{{ url_for('static', filename='resources/start-business.png') }}" alt="Business Owner Image">
       <p>Business Owner</p>
     </a>
   </div>

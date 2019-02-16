@@ -12,16 +12,19 @@
     </head>
     <body>
         <div id="buyer">
-            <h2>Zip Code</h2>
-            <input type="text" name="zipcode"></br>
-            <!-- center input text box if possible -->
-
-            <h2>Search Radius</h2>
-            <input type="text" name="radius"></br>
-            <!-- center input text box if possible -->
-            
-            <button>Search!</button>
-            <!-- pill button -->
+            <form action="/search" method="POST">
+                <div>
+                    <h2>Zip Code</h2>
+                    <input type="text" name="zipcode"></br>
+                </div>
+                <div>
+                    <h2>Search Radius</h2>
+                    <input type="text" name="radius"></br>
+                </div>
+                <div>
+                    <button>Search!</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>
