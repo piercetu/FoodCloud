@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" href="{{ url_for('static',filename='resources/favicon.png') }}">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Food Cloud - insert text</title>
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"> -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ url_for('static',filename='styles/start.css') }}">
-    </head>
-    <body>
-        <div>
-            <h1>Are you a..?</h1>
-            <div class="dim-button"></div>
-            <button>Buyer
-                <a href="/customer">Customer</a>
-            </button>
-            <div class="line-width"><div class="line"></div></div>
-            <button>Seller
-                <a href="/business">Business</a>
-            </button>
-            
-        </div>
-    </body>
+
+<head>
+  <link rel="icon" href="{{ url_for('static',filename='resources/favicon.png') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Food Cloud - insert text</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/start.css') }}">
+</head>
+
+<body>
+
+  <div id="start">
+    <h1>Are you a</h1>
+    <!-- <h2>Customer or a Business Owner?</h2> -->
+    <a class="selection customer" href="../templates/buyer.html">
+      <img src="../static/resources/start-customer.png" alt="Customer Image">
+      <p>Customer</p>
+    </a>
+    <p>Or</p>
+    <a class="selection business" href="../templates/seller.html">
+      <img src="../static/resources/start-business.png" alt="Business Owner Image">
+      <p>Business Owner</p>
+    </a>
+  </div>
+
+</body>
+
 </html>

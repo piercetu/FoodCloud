@@ -95,5 +95,13 @@ main button {
 }
 
 main a {
+  background-color: #199dff;
+  border-radius: 50px;
+  box-shadow: 0 30px 40px 0 rgba(25, 157, 255, 0.1);
   color: #ffffff;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  height: 45px;
+  width: 200px;
 }
