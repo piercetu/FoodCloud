@@ -54,6 +54,7 @@ p {
 }
 
 /* Base */
+/* Navigational Bar */
 #landing {
   background-color: #ffffff;
   height: 100%;
@@ -70,11 +71,24 @@ p {
   height: 64px;
 }
 
+#navbar img {
+  height: 40px;
+  width: 40px;
+  margin-right: 8px;
+}
+
+#navbar span {
+  font-weight: bolder;
+}
+
+#navbar a {
+  margin-right: 20px;
+}
 
 
+/* Main */
 main {
   /* background-color: rgba(158, 0, 0, 0.3); */
-
   height: calc(100% - 64px);
   display: flex;
     align-items: center;
@@ -97,7 +111,7 @@ main h1 {
 }
 
 main h2 {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 main button {
