@@ -85,15 +85,6 @@ main h2 {
   margin-bottom: 35px;
 }
 
-main button {
-  background-color: #199dff;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 30px 40px 0 rgba(25, 157, 255, 0.1);
-  height: 45px;
-  width: 200px;
-}
-
 main a {
   background-color: #199dff;
   border-radius: 50px;

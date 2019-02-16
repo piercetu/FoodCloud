@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Food Cloud - insert text</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/start.css') }}">
 </head>
 
@@ -15,16 +15,17 @@
 
   <div id="start">
     <h1>Are you a</h1>
-    <!-- <h2>Customer or a Business Owner?</h2> -->
-    <a class="selection customer" href="/customer">
-      <img src="{{ url_for('static', filename='resources/start-customer.png') }}" alt="Customer Image">
-      <p>Customer</p>
-    </a>
-    <p>Or</p>
-    <a class="selection business" href="/business">
-      <img src="{{ url_for('static', filename='resources/start-business.png') }}" alt="Business Owner Image">
-      <p>Business Owner</p>
-    </a>
+    <div class="container">
+      <a class="selection customer" href="/customer">
+        <img src="{{ url_for('static', filename='resources/start-customer.png') }}" alt="Customer Image">
+        <p>Customer</p>
+      </a>
+      <p>Or</p>
+      <a class="selection business" href="/business">
+        <img src="{{ url_for('static', filename='resources/start-business.png') }}" alt="Business Owner Image">
+        <p>Business Owner</p>
+      </a>
+    </div>
   </div>
 
 </body>
