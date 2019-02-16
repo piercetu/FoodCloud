@@ -1,3 +1,4 @@
+/* Landing Page CSS */
 /* Reset */
 * {
   box-sizing: border-box;
@@ -30,8 +31,6 @@ p {
 }
 
 #navbar {
-  /* background-color: rgba(0, 71, 104, 0.3); */
-  /* border: 5px dashed rgba(10, 10, 10, 0.3); */
   display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,7 +58,6 @@ p {
 
 /* Main */
 main {
-  /* background-color: rgba(158, 0, 0, 0.3); */
   height: calc(100% - 64px);
   display: flex;
     align-items: center;
