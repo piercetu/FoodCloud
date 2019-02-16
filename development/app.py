@@ -12,11 +12,12 @@ def start():
 
 @app.route('/customer')
 def customer():
-    return "customer"
+    return render_template('buyer.html')
 
 @app.route('/business')
 def business():
-    return "business"
+    # in here, do log in logic
+    return "in business"
 
 
 if __name__ == "__main__":
