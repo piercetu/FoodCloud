@@ -57,6 +57,7 @@ p {
 /* Navigational Bar */
 #landing {
   background-color: #ffffff;
+  background: url(../resources/homepage.jpg);
   height: 100%;
   width: 100%;
 }
@@ -78,10 +79,13 @@ p {
 }
 
 #navbar span {
+  font-size: 16px;
   font-weight: bolder;
 }
 
 #navbar a {
+  color: #8c95a4;
+  font-size: 16px;
   margin-right: 20px;
 }
 
@@ -111,6 +115,8 @@ main h1 {
 }
 
 main h2 {
+  color: #8c95a4;
+  font-size: 16px;
   margin-bottom: 35px;
 }
 
