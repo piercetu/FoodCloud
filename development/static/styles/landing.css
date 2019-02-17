@@ -65,7 +65,7 @@ main {
 }
 
 main div {
-  width: 400px;
+  width: 800px;
   display: flex;
     align-items: center;
     justify-content: center; 
@@ -74,15 +74,18 @@ main div {
 }
 
 main h1 {
-  font-size: 36px;
+  font-size: 75px;
   font-weight: bolder;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
+  text-shadow: 2px 2px grey;
+
+  
 }
 
 main h2 {
-  color: #8c95a4;
-  font-size: 16px;
-  margin-bottom: 35px;
+
+  font-size: 30px;
+  margin-bottom: 100px;
 }
 
 main a {
@@ -101,4 +104,14 @@ main a:hover {
   color: #ffffff;
   text-decoration: none;
   font-weight: bolder;
+}
+
+@keyframes fadein {    
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

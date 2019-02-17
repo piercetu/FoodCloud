@@ -4,7 +4,7 @@ import requests
 import json
 import pyrebase
 import request
-import win32api
+# import win32api
 
 app = Flask(__name__)
 
@@ -62,12 +62,12 @@ def login():
         try:
             auth.create_user_with_email_and_password(email, password)
             #alert("Account Created! :)")
-            win32api.MessageBox(0, "Account Created! :)", 'Success')
+            # win32api.MessageBox(0, "Account Created! :)", 'Success')
         except requests.exceptions.HTTPError as e:
             errormsg = str(e)
             err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
             # TODO: Update box - pop up
-            win32api.MessageBox(0, err, 'Error')
+            # win32api.MessageBox(0, err, 'Error')
             return redirect(url_for('signup'))
             
     return render_template('login.html')
