@@ -55,7 +55,7 @@ body {
   display: flex;
     align-items: center;
     justify-content: center;
-  background-color: red;
+  background-color: #f02929;
   color: #ffffff;
   height: 80px;
   font-size: 20px;
@@ -63,6 +63,13 @@ body {
   width: 100%;
 }
 
-h1, p {
+h1 {
   text-align: center;
+  font-size: 35px;
+} 
+
+p {
+  text-align: center;
+  font-size: 25px;
+  color: #312d2d;
 }
