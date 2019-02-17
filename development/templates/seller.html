@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/seller.css') }}"> -->
   <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/form.css') }}"> -->
-  <link rel="stylesheet" href="../static/styles/test.css"
+  <link rel="stylesheet" href="../static/styles/test.css">
 </head>
 
 <body>
@@ -53,17 +53,30 @@
 
   <!-- 2 textfields -->
 
-  <div class="info-row">
+  <!-- <div class="info-row">
     <h1>Company</h1>
     <input type="text" name="company-name" autocomplete="off">
     <h1>Zipcode</h1>
     <input type="text" name="zipcode" autocomplete="off">
   </div>
 
-
+  <html>
+  
+  <body> -->
+    <form action="/success" method="POST">
+      <p>Provider: <input type="text" name="provider" /></p>
+      <p>Zipcode: <input type="text" name="zipcode" /></p>
+      <p>Food Name: <input type="text" name="foodname" /></p>
+      <p>Price: <input type="text" name="price" /></p>
+      <p>Description: <input type="text" name="description"/></p>
+      <p><input type="submit" value="submit" /></p>
+    </form>
+</body>
+  
+</html>
 
   <!-- 2x3 table -->
-
+<!-- 
   <div class="grid-table">
     <h1>Name</h1>
     <input type="text" name="name1" autocomplete="off">
@@ -77,4 +90,4 @@
   </div>
 </body>
 
-</html>
+</html> -->

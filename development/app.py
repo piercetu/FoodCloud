@@ -17,6 +17,7 @@ config = {
 
 firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
+db = firebase.database()
 
 @app.route('/')
 def index():
@@ -46,10 +47,11 @@ def search():
         zipcode = request.form['zipcode']
         radius = request.form['radius']
         print("{} {}".format(zipcode, radius))
-        url = "https://www.zipcodeapi.com/rest/RzOSXX9PvVlojd25uKLhCsQs5IByWMJMsFj0Lbt1pRYo1CQSSDeRW2BeLZN69idK/radius.json/{}/{}/mile".format(
+        url = "https://www.zipcodeapi.com/rest/HBxMce6VETPlGOKfisR4MXrgeQ006chpJ81XcorspiOPDIL4qluy1Ye1md0gxSnC/radius.json/{}/{}/mile".format(
             str(zipcode), str(radius))
         source = requests.get(url)
         data = source.text
+        print(data)
         zips = json.loads(data)['zip_codes']
 
         return render_template('customer-view.html')
@@ -82,21 +84,31 @@ def login():
 
 @app.route('/business', methods=['POST', 'GET'])
 def business():
-        if request.method == 'POST':
-            print("received request")
-            email = request.form['email']
-            password = request.form['password']
-            print(email, password)
-            try:
-                user = auth.sign_in_with_email_and_password(email, password)
-            except requests.exceptions.HTTPError as e:
-                errormsg = str(e)
-                err = errormsg.split('{')[2].split(',')[1].split(
-                    ':')[1].strip().replace("\"", "").replace("_", " ").lower()
-                return redirect(url_for('business'))
+    if request.method == 'POST':
+        print("received request")
+        email = request.form['email']
+        password = request.form['password']
+        print(email, password)
+        try:
+            user = auth.sign_in_with_email_and_password(email, password)
+        except requests.exceptions.HTTPError as e:
+            errormsg = str(e)
+            err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
+            return redirect(url_for('business'))
 
-        return render_template('seller.html')
+    return render_template('seller.html')
 
+@app.route('/success', methods=['POST', 'GET'])
+def success():
+    if request.method == 'POST':
+        companyid = request.form['provider']+request.form['zipcode']
+        foodname = request.form['foodname']
+        price = request.form['price']
+        description = request.form['description']
+        fooddict = {}
+        fooddict[foodname] = (price, description)
+        db.child("users").child('C3ncII39QNcdEQ2IPQMFGvxTmIj1').set(fooddict)
+    return render_template('success.html')
 
 if __name__ == "__main__":
     print("Running FoodCloud")
