@@ -17,13 +17,13 @@
     <!-- Login Form -->
     <div id="splash-right">
       <h2>Login</h2>
-      <h3>Sub Text</h3>
-      <form action="">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <input type="submit">
+      <h3>Please enter your email and password</h3>
+      <form action="/business" method="POST">
+        <input type="email" name="email" placeholder="Email" autocomplete="off" required>
+        <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+        <input type="submit" id="submit" value="Log In">
       </form>
-      <a href="../business/business-signup.html">Or sign up!</a>
+      <a href="/signup">Or sign up!</a>
     </div>
   </div>
 </body>

@@ -1,9 +1,7 @@
-from flask import *
-# Flask, render_template, request, 
+from flask import Flask, render_template, request, redirect, url_for
 import requests
 import json
 import pyrebase
-import request
 import win32api
 
 app = Flask(__name__)
@@ -39,7 +37,7 @@ def start():
 
 @app.route('/customer')
 def customer():
-    return render_template('buyer.html')
+    return render_template('customer-view.html')
 
 @app.route('/search', methods=['POST', 'GET'])
 def search():
@@ -58,28 +56,28 @@ def search():
 
 @app.route('/signup')
 def signup():
-    return render_template('signup.html')
+    return render_template('business/business-signup.html')
 
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
         print("received request")
+        print(str(request))
         email = request.form['email']
         password = request.form['password']
         print(email, password)
         try:
             auth.create_user_with_email_and_password(email, password)
-            #alert("Account Created! :)")
-            win32api.MessageBox(0, "Account Created! :)", 'Success')
+            print("account created!")
         except requests.exceptions.HTTPError as e:
             errormsg = str(e)
             err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
             # TODO: Update box - pop up
-            win32api.MessageBox(0, err, 'Error')
+            print("error: "+str(err))
             return redirect(url_for('signup'))
             
-    return render_template('login.html')
+    return render_template('business/business-login.html')
 
 
 @app.route('/business', methods=['POST', 'GET'])
@@ -91,7 +89,6 @@ def business():
             print(email, password)
             try:
                 user = auth.sign_in_with_email_and_password(email, password)
-                win32api.MessageBox(0, "Sign in success! :)", 'Success')
             except requests.exceptions.HTTPError as e:
                 errormsg = str(e)
                 err = errormsg.split('{')[2].split(',')[1].split(
