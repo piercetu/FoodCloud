@@ -51,9 +51,17 @@ def search():
             str(zipcode), str(radius))
         source = requests.get(url)
         data = source.text
-        print(data)
         zips = json.loads(data)['zip_codes']
-
+        foodlst = []
+        all_users = db.child("users").get()
+        for zipp in zips:
+            for user in all_users.each():
+                try: 
+                    if zipp['zip_code'] == user.val()['zipcode']:
+                        foodlst.append(zipp)
+                except: 
+                    continue
+        print(foodlst)
         return render_template('customer-view.html')
 
 @app.route('/signup')
