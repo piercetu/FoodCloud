@@ -66,6 +66,7 @@ def login():
         except requests.exceptions.HTTPError as e:
             errormsg = str(e)
             err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
+            # TODO: Update box - pop up
             win32api.MessageBox(0, err, 'Error')
             return redirect(url_for('signup'))
             
