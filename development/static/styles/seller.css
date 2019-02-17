@@ -90,7 +90,6 @@ input[type="file"]:active::before {
   display: flex;
     align-items: center;
     flex-direction: column;
-  /* width: 00px; */
   margin: 0 2%;
   padding: 10px 0 20px 0;
 }
