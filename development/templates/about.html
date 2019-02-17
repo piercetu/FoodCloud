@@ -1,106 +1,103 @@
-<!-- ABOUT US -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="icon" href="{{ url_for('static',filename='resources/favicon.png') }}">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Food Cloud - insert text</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../static/styles/about.css">
-  <script src="../static/animation/about.js"></script>
+  <title>FoodCloud | Solution to Reducing Food Waste</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/faq.css') }}">
 </head>
 
+
 <body>
-  <h1> About Section</h1>
-
-  <h2>Food Cloud</h2>
-    <h3>Curbing food waste for a sustainable future</h3>
-
+  <h1>About</h1>
+  <h1 id="subheading" font-size="16px">Curbing food waste for a sustainable future</h1>
+  <!-- <input type="text" class="live-search-box" placeholder="Search a question..." /> -->
   <div class="topic">
-      <div class="open">
-          <h2 class="question"><span class="ptag">Inspiration</span></h2>
-          <span class="faq-t"></span>
-      </div>
-      <p class="answer">The awareness vertical - Every year food companies throw away an excess amount of food. 
-          According to the Food and Agriculture Organization of the United Nations, “roughly one-third of the food produced in the 
-          world for human consumption every year — approximately 1.3 billion tonnes — gets lost or wasted.”</p>
+
+    <div class="open">
+
+      <h2 class="question">1. Inspiration<span class="ptag">SIEBEL</span></h2>
+      <span class="faq-t"></span>
+    </div>
+    <p class="answer">The awareness vertical - Every year food companies throw away an excess amount of food. According
+      to the Food and
+      Agriculture Organization of the United Nations, “roughly one-third of the food produced in the world for human
+      consumption every year — approximately 1.3 billion tonnes — gets lost or wasted.”</p>
   </div>
-  
   <div class="topic">
     <div class="open">
-        <h2 class="question"><span class="ptag">What it does</span></h2>
-        <span class="faq-t"></span>
+      <h2 class="question">2. What it does</h2><span class="faq-t"></span>
     </div>
-    <p class="answer">With this in mind, we brainstormed a way for food companies and restaurants to make use of the extra amount 
-      of food produced. With the two day time constraints and team skills, we decided to make a web application for a 
-      normal consumer to buy excess food based on the desired location radius. The business would signup and login to post food. 
-      The consumer would be able to buy discounted food from the post.</p>
-</div>
-   
-<div class="topic">
-  <div class="open">
-      <h2 class="question"><span class="ptag">How we built it</span></h2>
-      <span class="faq-t"></span>
+    <p class="answer">With this in mind, we brainstormed a way for food companies and restaurants to make use of the
+      extra amount of food
+      produced. With the two day time constraints and team skills, we decided to make a web application for a normal
+      consumer
+      to buy excess food based on the desired location radius. The business would signup and login to post food. The
+      consumer
+      would be able to buy discounted food from the post.
+    </p>
   </div>
-  <p class="answer">For our project, we built our web pages using HTML, CSS, and JavaScript. Our choice of database was Firebase,
-    and we used it with flask as our framework. Our backend was created using Flask and Python.</p>
-</div>
- 
-<div class="topic">
-  <div class="open">
-      <h2 class="question"><span class="ptag">Challenges we ran into</span></h2>
-      <span class="faq-t"></span>
+  <div class="topic">
+    <div class="open">
+      <h2 class="question">3. How we built it</h2><span class="faq-t"></span>
+    </div>
+    <p class="answer">For our project, we built our web pages using HTML, CSS, and JavaScript. Our choice of database
+      was Firebase, and we
+      used it with flask as our framework. Our backend was created using Flask and Python.
+    </p>
   </div>
-  <p class="answer">A challenge was using Flask with Firebase. The documentation was skewed to a pure Python solution with python-admin. 
-    Time should have been used to pyrebase, a python wrapper for the Firebase API. Another challenge was developing for the real-time
-     database section for Firebase. We opted for Firestore instead.</p>
-</div>
-
-<div class="topic">
-  <div class="open">
-      <h2 class="question"><span class="ptag">Accomplishments that we're proud of</span></h2>
-      <span class="faq-t"></span>
+  <div class="topic">
+    <div class="open">
+      <h2 class="question">4. Challenges we ran into</h2><span class="faq-t"></span>
+    </div>
+    <p class="answer">A challenge was using Flask with Firebase. The documentation was skewed to a pure Python solution
+      with python-admin.
+      Time should have been used to pyrebase, a python wrapper for the Firebase API. Another challenge was developing
+      for the
+      real-time database section for Firebase. We opted for Firestore instead.</p>
   </div>
-  <p class="answer">We are proud of the idea and the application made. We did code it completely on scratch and used productively utilize 
-    agile methodologies. The idea is very unique and we hope to be able to spread awareness of saving food waste with this application.</p>
-</div>
-
-<div class="topic">
-  <div class="open">
-      <h2 class="question"><span class="ptag">What we learned</span></h2>
-      <span class="faq-t"></span>
+  <div class="topic">
+    <div class="open">
+      <h2 class="question">5. Accomplishments that we're proud of</h2><span class="faq-t"></span>
+    </div>
+    <p class="answer">We are proud of the idea and the application made. We did code it completely on scratch and used
+      productively utilize
+      agile methodologies. The idea is very unique and we hope to be able to spread awareness of saving food waste with
+      this
+      application.</p>
   </div>
-  <p class="answer">Everyone learned different things throughout this project. However, after discussing and solving our problems, we have all 
-    gained a better understanding of the full stack environment. We have also all learned how to use firebase for web applications alongside Flask.</p>
+  <div class="topic">
+    <div class="open">
+      <h2 class="question">6. What we learned</h2><span class="faq-t"></span>
+    </div>
+    <p class="answer">Everyone learned different things throughout this project. However, after discussing and solving
+      our problems, we have
+      all gained a better understanding of the full stack environment. We have also all learned how to use firebase for
+      web
+      applications alongside Flask.</p>
   </div>
-
-<div class="topic">
-  <div class="open">
-      <h2 class="question"><span class="ptag">What's next for FoodCloud</span></h2>
-      <span class="faq-t"></span>
+  <div class="topic">
+    <div class="open">
+      <h2 class="question">7. What's next for FoodCloud</h2><span class="faq-t"></span>
+    </div>
+    <p class="answer">The next steps for FoodCloud would be having better design or identity. Projects should have
+      consistency with the design
+      as noted by the Scott Forstall, creator of IOS. Another must-have feature is having a better schema with the
+      user/business Firebase database.
+    </p>
   </div>
-  <p class="answer">The next steps for FoodCloud would be having better design or identity. Projects should have consistency with the design 
-    as noted by the Scott Forstall, creator of IOS. Another must-have feature is having a better schema with the user/business Firebase database.</p>
-</div>
-    
-<div class="topic">
-  <div class="open">
-      <h2 class="question"><span class="ptag">Built with</span></h2>
-      <span class="faq-t"></span>
+  <div class="topic">
+    <div class="open">
+      <h2 class="question">8. Built With</h2><span class="faq-t"></span>
+    </div>
+    <p class="answer">Firebase, Flask, Python, JavaScript, CSS, bootstrap, HTML
+    </p>
   </div>
-  <p class="answer">TFirebase
-    Flask
-    Python
-    JavaScript
-    CSS
-    HTML.</p>
-</div>
-   
-    
-  </h4>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="{{ url_for('static',filename='animation/faq.js') }}"></script>
 </body>
 
 </html>
