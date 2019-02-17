@@ -78,3 +78,50 @@ input[type="file"]:hover::before {
 input[type="file"]:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
+
+/* Nhat's Code */
+#seller {
+  background-color: #eeeff0;
+  height: 100vh;
+}
+
+#upload-section {
+  background-color: #ffffff;
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+  /* width: 00px; */
+  margin: 0 2%;
+  padding: 10px 0 20px 0;
+}
+
+#add-items {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  height: 200px;
+}
+
+#add-items-right {
+  display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  margin-left: 50px;
+}
+
+#add-items-left, #add-items-right {
+  display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+  height: 100%;
+}
+
+#add-items-left input {
+  height: 100%;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+}

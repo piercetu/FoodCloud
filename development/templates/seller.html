@@ -17,13 +17,33 @@
   <!-- <input type="file"> -->
   <!-- <label class="custom-file" for="Image">Select file to upload</label> -->
 
-  <label class="file">
+  <!-- <label class="file">
     <input type="file" id="file" aria-label="File browser example">
     <span class="file-custom"></span>
-  </label>
+  </label> -->
 
+  <div id="seller">
+    <h1>Buyer's Section</h1>
 
-
+    <div id="upload-section">
+      <h2>Upload Section</h2>
+      <form id="add-items">
+        <div id="add-items-left">
+          <input type="text" name="item-picture">
+        </div>
+        <div id="add-items-right">
+          <label for="item-name">Name:</label>
+          <input type="text" name="item-name">
+          <label for="item-price">Price:</label>
+          <input type="text" name="item-price">
+          <label for="item-description">Description:</label>
+          <input type="text" name="item-description">
+          <input type="submit" name="item-submit">
+        </div>
+      </form>
+      <div id="view-items"></div>
+    </div>
+  </div>
 </body>
 
 </html>
