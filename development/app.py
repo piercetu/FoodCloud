@@ -3,10 +3,7 @@ from flask import *
 import requests
 import json
 import pyrebase
-import urllib.request
-import urllib.parse
-import urllib.error
-from urllib.parse import unquote
+import request
 import win32api
 
 app = Flask(__name__)
