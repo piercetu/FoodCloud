@@ -3,12 +3,25 @@
 <html>
 
 <head>
-  <link rel="icon" href="{{ url_for('static',filename='resources/favicon.png') }}">
+  <!-- <link rel="icon" href="{{ url_for('static',filename='resources/favicon.png') }}"> -->
+  <link rel="icon" href="../static/resources/favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Food Cloud - Customer View</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/buyer.css') }}"> -->
+  <link rel="stylesheet" href="../static/styles/buyer.css">
+</head>
+
+<body>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="../static/resources/homepage.jpg" alt="Card image cap">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Food Title</li>
+      <li class="list-group-item">$Price</li>
+      <li class="list-group-item">Description</li>
+    </ul>
   <link rel="stylesheet" href="{{ url_for('static',filename='styles/customer-view.css') }}">
   <link rel="stylesheet" href="../static/styles/customer-view.css">
 </head>

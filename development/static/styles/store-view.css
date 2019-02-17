@@ -1,0 +1,17 @@
+body {
+    padding-top: 40px;
+  }
+  
+  .col-sm-6 {
+    background: #ccc;
+  }
+  
+  .p {
+    text-align: center;
+    padding-top: 120px;
+  }
+  
+  .p a {
+    text-decoration: underline;
+    color: blue;
+  }
