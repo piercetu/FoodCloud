@@ -1,0 +1,14 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+#customer-view {
+  display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.food-container {
+  margin-right: 10px;
+  min-width: 300px;
+}
