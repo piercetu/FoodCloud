@@ -58,11 +58,11 @@ def search():
             for user in all_users.each():
                 try: 
                     if zipp['zip_code'] == user.val()['zipcode']:
-                        foodlst.append(zipp)
+                        foodlst.append(user.val())
                 except: 
                     continue
         print(foodlst)
-        return render_template('customer-view.html')
+        return render_template('customer-view.html', foodlst = foodlst)
 
 @app.route('/signup')
 def signup():
@@ -120,6 +120,7 @@ def success():
         companyname = request.form['provider']
         zipcode = request.form['zipcode']
         companyid = companyname + zipcode
+
         foodname = request.form['foodname']
         price = request.form['price']
         description = request.form['description']

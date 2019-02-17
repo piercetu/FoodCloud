@@ -30,6 +30,18 @@
   <h1>Food in your area...</h1>
 
   <div id="customer-view">
+    {% for food in foodlst %}
+    <div class="food-container card" style="width: 18rem;">
+      <img class="card-img-top" src="../static/resources/taco.png" alt="Card image cap">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Company Name: {{ food['name'] }}</li>
+        <li class="list-group-item">Zip Code: {{ food['zipcode'] }}</li>
+        <li class="list-group-item">Food Name: {{ food['foodname'] }}</li>
+        <li class="list-group-item">Price: {{ food['price'] }}</li>
+        <li class="list-group-item">Description: {{ food['description'] }}</li>
+      </ul>
+    </div>
+    {% endfor %}
 
     <!-- IMPORTANT: For Tina and Pierce -->
 
@@ -37,68 +49,68 @@
 
     <!-- <div class="card-deck"> -->
     <!-- Object 1 -->
-    <div class="food-container card" style="width: 18rem;">
+    <!-- <div class="food-container card" style="width: 18rem;">
       <img class="card-img-top" src="../static/resources/taco.png" alt="Card image cap">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Name (Object1[0])</li>
         <li class="list-group-item">Price (Object[1])</li>
         <li class="list-group-item">Description (Object[2])</li>
       </ul>
-    </div>
+    </div> -->
 
     <!-- Object 2 (Different Values) -->
-    <div class="food-container card" style="width: 18rem;">
+    <!-- <div class="food-container card" style="width: 18rem;">
       <img class="card-img-top" src="../static/resources/taco.png" alt="Card image cap">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Food (Object2[0])</li>
         <li class="list-group-item">Price (Object2[1])</li>
         <li class="list-group-item">Description (Object2[2])</li>
       </ul>
-    </div>
+    </div> -->
 
     <!-- Object 2 (Different Values) -->
-    <div class="food-container card" style="width: 18rem;">
+    <!-- <div class="food-container card" style="width: 18rem;">
       <img class="card-img-top" src="../static/resources/taco.png" alt="Card image cap">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Food (Object2[0])</li>
         <li class="list-group-item">Price (Object2[1])</li>
         <li class="list-group-item">Description (Object2[2])</li>
-      </ul>
-    </div>
+      </ul> -->
+    <!-- </div> -->
     <!-- </div> -->
 
     <!-- <div class="card-deck"> -->
     <!-- Object 2 (Different Values) -->
-    <div class="food-container card" style="width: 18rem;">
+    <!-- <div class="food-container card" style="width: 18rem;">
       <img class="card-img-top" src="../static/resources/taco.png" alt="Card image cap">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Food (Object2[0])</li>
         <li class="list-group-item">Price (Object2[1])</li>
         <li class="list-group-item">Description (Object2[2])</li>
       </ul>
-    </div>
+    </div> -->
 
 
 
     <!-- Object 2 (Different Values) -->
-    <div class="food-container card" style="width: 18rem;">
+    <!-- <div class="food-container card" style="width: 18rem;">
       <img class="card-img-top" src="../static/resources/taco.png" alt="Card image cap">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Food (Object2[0])</li>
         <li class="list-group-item">Price (Object2[1])</li>
         <li class="list-group-item">Description (Object2[2])</li>
       </ul>
-    </div>
+    </div> -->
 
     <!-- Object 2 (Different Values) -->
-    <div class="food-container card" style="width: 18rem;">
+    <!-- <div class="food-container card" style="width: 18rem;">
       <img class="card-img-top" src="../static/resources/taco.png" alt="Card image cap">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Food (Object2[0])</li>
         <li class="list-group-item">Price (Object2[1])</li>
         <li class="list-group-item">Description (Object2[2])</li>
       </ul>
-    </div>
+    </div> -->
     <!-- </div> -->
 
   </div>
