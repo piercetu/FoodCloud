@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#splash {
+  /* border: 5px dashed blue; */
+  display: flex;
+    align-items: center;  
+    justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#splash-left {
+  /* background-color: #ffcece;
+  border: 5px dashed red; */
+  border-right: 1px solid lightgray;
+  background: url(../../resources/business-login.png);
+    /* background-size: cover; */
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  flex: 1;
+  height: 100%;
+}
+
+#splash-right {
+  /* background-color: #cecfff;
+  border: 5px dashed yellowgreen; */
+
+  flex: 1;  
+  height: 100%;
+
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+  font-weight: bolder;
+  font-size: 24px;
+  margin: 0;
+}
+
+input {
+  margin-bottom: 20px;
+  width: 220px;
+
+  height: 25px;
+}
+
+input[type=submit] {
+  color: #ffffff;
+  background-color: #00bcf5;
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+#login #splash-left {
+  background: url(../../resources/business-signup.png);
+    background-size: cover;
+    background-position: 40% 40%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* #splash-right {
+  border-left: 1px solid lightgray;
+} */
