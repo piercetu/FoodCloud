@@ -2,12 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 import requests
 import json
 import pyrebase
-<<<<<<< HEAD
-import win32api
-=======
-import request
+# import request
 # import win32api
->>>>>>> d5234e7d8763ead9d3bdf33282abdabe93546f2d
 
 app = Flask(__name__)
 
@@ -74,21 +70,13 @@ def login():
         print(email, password)
         try:
             auth.create_user_with_email_and_password(email, password)
-<<<<<<< HEAD
-            print("account created!")
-=======
             #alert("Account Created! :)")
             # win32api.MessageBox(0, "Account Created! :)", 'Success')
->>>>>>> d5234e7d8763ead9d3bdf33282abdabe93546f2d
         except requests.exceptions.HTTPError as e:
             errormsg = str(e)
             err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
             # TODO: Update box - pop up
-<<<<<<< HEAD
-            print("error: "+str(err))
-=======
             # win32api.MessageBox(0, err, 'Error')
->>>>>>> d5234e7d8763ead9d3bdf33282abdabe93546f2d
             return redirect(url_for('signup'))
             
     return render_template('business/business-login.html')
@@ -107,7 +95,7 @@ def business():
                 errormsg = str(e)
                 err = errormsg.split('{')[2].split(',')[1].split(
                     ':')[1].strip().replace("\"", "").replace("_", " ").lower()
-                win32api.MessageBox(0, err, 'Error')
+                # win32api.MessageBox(0, err, 'Error')
                 return redirect(url_for('business'))
 
         return render_template('seller.html')
