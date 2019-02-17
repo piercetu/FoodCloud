@@ -96,18 +96,23 @@ def business():
             err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
             return redirect(url_for('business'))
 
+        # data = {"name": "Pierce"}
+
     return render_template('seller.html')
 
 @app.route('/success', methods=['POST', 'GET'])
 def success():
     if request.method == 'POST':
-        companyid = request.form['provider']+request.form['zipcode']
-        foodname = request.form['foodname']
-        price = request.form['price']
-        description = request.form['description']
-        fooddict = {}
-        fooddict[foodname] = (price, description)
-        db.child("users").child('C3ncII39QNcdEQ2IPQMFGvxTmIj1').set(fooddict)
+        # companyid = request.form['provider']+request.form['zipcode']
+        # foodname = request.form['foodname']
+        # price = request.form['price']
+        # description = request.form['description']
+        # fooddict = {}
+        # fooddict[foodname] = (price, description)
+        db.child("users").child('w4gPGBRkSucYTm3SIprY7mN1rYq2')
+        # .set(fooddict)
+        data = {"name": "Pierce"}
+        db.child("users").push(data)
     return render_template('success.html')
 
 if __name__ == "__main__":
