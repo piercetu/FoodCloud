@@ -97,6 +97,12 @@ main a {
   width: 200px;
 }
 
+main a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 /* CSS Import */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
