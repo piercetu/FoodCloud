@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FoodCloud | Solution to Reducing Food Waste</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/faq.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='resources/favicon.png') }}">
+</head>
+
+
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <input type="text" class="live-search-box" placeholder="Search a question..." />
+    <div class="topic">
+
+        <div class="open">
+
+            <h2 class="question">1. What does FoodCloud do?<span class="ptag">SIEBEL</span></h2>
+            <span class="faq-t"></span>
+        </div>
+        <p class="answer">FoodCloud's mission is reducing food waste and encourging businesses and customers to partake
+            in sustainable lifestyles. On our plateform, businesses post food sales before their close time to reduce their food
+            waste for the day, and customers receive information about those cheaper food options based on their locations and how 
+            far they are willing to travel. The platform benefits both comsumers and providers, and aims to ameliorate the issue of 
+            food water in the United States.</p>
+    </div>
+    <div class="topic">
+        <div class="open">
+            <h2 class="question">2. How do I get involved as a business?</h2><span class="faq-t"></span>
+        </div>
+        <p class="answer">Business can sign up on our signup page with an email and zipcode. After logging into your account, 
+            you are redirected to a webpage where pictures, descriptions and prices of the food can be uploaded before the business
+            closing time. 
+        </p>
+    </div>
+    <div class="topic">
+        <div class="open">
+            <h2 class="question">3. How do I get involved as a customer? </h2><span class="faq-t"></span>
+        </div>
+        <p class="answer">Customers can search for food sales around a N mile radius from a zipcode. If there are businesses from
+            those zipcode area, the food information will be on the customer's feed. 
+        </p>
+    </div>
+    <div class="topic">
+        <div class="open">
+            <h2 class="question">4. Are there any fees or costs to join? </h2><span class="faq-t"></span>
+        </div>
+        <p class="answer">The service is free to join for businesses and free to use for customers :)</p>
+    </div>
+    <div class="topic">
+        <div class="open">
+            <h2 class="question">5. How do we contact you? </h2><span class="faq-t"></span>
+        </div>
+        <p class="answer">For questions and business inquries, please contact food.cloud@gmail.com</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="{{ url_for('static',filename='animation/faq.js') }}"></script>
+</body>
+
+</html> 

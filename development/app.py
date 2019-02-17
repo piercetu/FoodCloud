@@ -24,6 +24,15 @@ auth = firebase.auth()
 def index():
     return render_template('index.html')
 
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
+
 @app.route('/start')
 def start():
     return render_template('start.html')
