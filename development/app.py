@@ -70,12 +70,27 @@ def login():
             win32api.MessageBox(0, err, 'Error')
             return redirect(url_for('signup'))
             
-        return render_template('login.html')
+    return render_template('login.html')
 
-@app.route('/business')
+
+@app.route('/business', methods=['POST', 'GET'])
 def business():
-    # in here, do log in logic
-    return render_template('seller.html')
+        if request.method == 'POST':
+            print("received request")
+            email = request.form['email']
+            password = request.form['password']
+            print(email, password)
+            try:
+                user = auth.sign_in_with_email_and_password(email, password)
+                win32api.MessageBox(0, "Sign in success! :)", 'Success')
+            except requests.exceptions.HTTPError as e:
+                errormsg = str(e)
+                err = errormsg.split('{')[2].split(',')[1].split(
+                    ':')[1].strip().replace("\"", "").replace("_", " ").lower()
+                win32api.MessageBox(0, err, 'Error')
+                return redirect(url_for('business'))
+
+        return render_template('seller.html')
 
 
 if __name__ == "__main__":
