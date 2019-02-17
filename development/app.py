@@ -66,19 +66,27 @@ def login():
     if request.method == 'POST':
         print("received request")
         print(str(request))
+        companyzip = {}
+        companyname = request.form['companyname']
+        zipcode = request.form['zipcode']
+        companyid = companyname + zipcode
+        data = {"name": companyname}
+
         email = request.form['email']
         password = request.form['password']
         print(email, password)
         try:
-            auth.create_user_with_email_and_password(email, password)
+            user = auth.create_user_with_email_and_password(email, password)
+            # TODO: print message to frontend: account created!
             print("account created!")
         except requests.exceptions.HTTPError as e:
             errormsg = str(e)
+            print(errormsg)
             err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
-            # TODO: Update box - pop up
+            # TODO:  print message to frontend: err
             print("error: "+str(err))
             return redirect(url_for('signup'))
-            
+        results = db.child("users").child(companyid).set(data)
     return render_template('business/business-login.html')
 
 
@@ -96,23 +104,22 @@ def business():
             err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
             return redirect(url_for('business'))
 
-        # data = {"name": "Pierce"}
-
     return render_template('seller.html')
 
 @app.route('/success', methods=['POST', 'GET'])
 def success():
     if request.method == 'POST':
-        # companyid = request.form['provider']+request.form['zipcode']
-        # foodname = request.form['foodname']
-        # price = request.form['price']
-        # description = request.form['description']
-        # fooddict = {}
-        # fooddict[foodname] = (price, description)
-        db.child("users").child('w4gPGBRkSucYTm3SIprY7mN1rYq2')
-        # .set(fooddict)
-        data = {"name": "Pierce"}
-        db.child("users").push(data)
+        companyname = request.form['provider']
+        zipcode = request.form['zipcode']
+        companyid = companyname + zipcode
+        foodname = request.form['foodname']
+        price = request.form['price']
+        description = request.form['description']
+        fooddict = {}
+        fooddict[foodname] = (price, description)
+        db.child("users").child(companyid).update({"name": companyname, "zipcode": zipcode, "foodname": foodname, "price": price, "description": description})
+        # db.child("users").push(data).set(fooddict)
+        
     return render_template('success.html')
 
 if __name__ == "__main__":
