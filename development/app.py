@@ -3,8 +3,25 @@ from flask import *
 import requests
 import json
 import pyrebase
+import urllib.request
+import urllib.parse
+import urllib.error
+from urllib.parse import unquote
+import win32api
 
 app = Flask(__name__)
+
+config = {
+    "apiKey": "AIzaSyAAQy9dhBXZwjs79hhWdDl2ROrg394gD58",
+    "authDomain": "foodcloud-e429c.firebaseapp.com",
+    "databaseURL": "https://foodcloud-e429c.firebaseio.com",
+    "projectId": "foodcloud-e429c",
+    "storageBucket": "foodcloud-e429c.appspot.com",
+    "messagingSenderId": "963030835928"
+}
+
+firebase = pyrebase.initialize_app(config)
+auth = firebase.auth()
 
 @app.route('/')
 def index():
@@ -33,27 +50,28 @@ def search():
 
         return render_template('search.html', zips=zips)
 
-@app.route('/signup', methods=['POST', 'GET'])
+@app.route('/signup')
 def signup():
-    unsuccessful = 'Please check your credentials'
-    successful = 'Login successful'
-    
-    if request.method == 'POST':
-        print("***********************************")
-        print("received request")
-        print("***********************************")
-        email = request.form['email']
-        print("error email")
-        password = request.form['password']
-        print("error pw")
-        try:
-        	auth.sign_in_with_email_and_password(email, password)
-        	return render_template('signup.html', s=successful)
-        except:
-            return render_template('signup.html', us=unsuccessful)
-
     return render_template('signup.html')
 
+
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    if request.method == 'POST':
+        print("received request")
+        email = request.form['email']
+        password = request.form['password']
+        print(email, password)
+        try:
+            auth.create_user_with_email_and_password(email, password)
+            #alert("Account Created! :)")
+            win32api.MessageBox(0, "Account Created! :)", 'Success')
+        except requests.exceptions.HTTPError as e:
+            errormsg = str(e)
+            err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
+            win32api.MessageBox(0, err, 'Error')
+            
+        return render_template('login.html')
 
 @app.route('/business')
 def business():
@@ -64,28 +82,3 @@ def business():
 if __name__ == "__main__":
     print("Running FoodCloud")
     app.run(host="127.0.0.1", port=5000)
-
-config = {
-    "apiKey": "AIzaSyAAQy9dhBXZwjs79hhWdDl2ROrg394gD58",
-    "authDomain": "foodcloud-e429c.firebaseapp.com",
-    "databaseURL": "https://foodcloud-e429c.firebaseio.com",
-    "projectId": "foodcloud-e429c",
-    "storageBucket": "foodcloud-e429c.appspot.com",
-    "messagingSenderId": "963030835928"
-  }
-
-firebase = pyrebase.initialize_app(config)
-
-# Get a reference to the auth service
-auth = firebase.auth()
-
-# Sign up
-# email = input('Please enter email\n')
-# password = input('Please enter password\n')
-
-# Create user
-user = auth.create_user_with_email_and_password(session["email"], session["password"])
-
-# Pass the user's idToken to the push method
-auth.get_account_info(user['idToken'])
-
