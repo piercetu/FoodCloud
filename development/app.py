@@ -67,6 +67,7 @@ def login():
             errormsg = str(e)
             err = errormsg.split('{')[2].split(',')[1].split(':')[1].strip().replace("\"", "").replace("_", " ").lower()
             win32api.MessageBox(0, err, 'Error')
+            return redirect(url_for('signup'))
             
         return render_template('login.html')
 
