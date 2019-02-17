@@ -9,6 +9,8 @@ body {
 }
 
 .food-container {
-  /* margin-right: 10px; */
-  /* min-width: 300px; */
+  margin-right: 10px;
+  min-width: 300px;
+  width: 300px;
+  max-width: 300px;
 }
